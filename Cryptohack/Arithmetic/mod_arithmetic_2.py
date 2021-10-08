@@ -7,14 +7,15 @@ is p is prime, for every integer a:
 if p is prime and a is an integer coprime with p,
     pow(a, p - 1) = 1 mod p
 
-
 """
 
 from math import gcd
-print(gcd(273246787654, 65537))
+print(gcd(273_246_787_654, 65_537))
+
 
 def modulo(a, b, n):
     return (a ** b) % n
+
 
 print(modulo(3, 17, 17))
 print(modulo(5, 17, 17))
