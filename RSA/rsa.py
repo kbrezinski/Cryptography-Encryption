@@ -3,6 +3,7 @@ from typing import Tuple
 
 # Two large primes
 
+
 def main():
 
     # selected primes
@@ -21,6 +22,7 @@ def egcd(a: int, b: int) -> Tuple[int, int, int]:
         g, y, x = egcd(b % a, a)
         return g, x - (b // a) * y, y
 
+
 def gcd(a: int, b: int):
     while b != 0:
         c = a % b
@@ -28,11 +30,13 @@ def gcd(a: int, b: int):
         b = c
     return a
 
+
 def modinv(a: int, b: int) -> int:
     g, x, _ = egcd(a, b)
     if g != 1:
         raise Exception('gcd(a, b) != 1')
     return x % b
+
 
 def coprimes(a: int):
     l = []
