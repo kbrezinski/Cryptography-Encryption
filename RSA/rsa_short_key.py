@@ -30,8 +30,8 @@ def main():
 
     # need to find a way to factor such a large number
     p, q = None, None  # p and q are unknown
-    p = find_factors(n)
-    q = int(n / p)
+    p = find_factors(n)  # only possible with low numbers as it bruce forces factors
+    q = int(n / p)  # find q
     phi = (p - 1) * (q - 1)
 
     # print constants
@@ -46,6 +46,7 @@ def main():
 
     # encrypt with public
     cipher = [pow(c, e, n) for c in text]
+    print(cipher)
 
     # decrypt with multiplicative inverse d
     plaintext = [pow(c, d, n) for c in cipher]
