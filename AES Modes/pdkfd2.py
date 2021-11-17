@@ -20,6 +20,7 @@ ciphertext = cipher.encrypt(text)
 print(f"{ciphertext.hex() = }")
 print(f"{cipher.decrypt(ciphertext) = }")
 
+
 # guess a key based on a preset configuration and known key = [0, 1000)
 def guess_key():
     for i in range(1000):

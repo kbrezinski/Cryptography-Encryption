@@ -22,7 +22,7 @@ key = RSA.construct((
 ))  # generate public and private keys
 
 # save key to pwd
-with open('mykey.pem', 'wb') as f:
+with open('../RSA/mykey.pem', 'wb') as f:
     f.write(key.export_key('PEM'))
 
 # constants
